@@ -2,22 +2,49 @@ import React, {useCallback, useState, useEffect} from 'react';
 import {Formik, Form, Field, ErrorMessage} from "formik";
 import * as Yup from "yup";
 
-//초기 값 설명 객체
-//입력 필드의 이름 값과 일치
+/**
+ *  @summary  ValidationTest 화면 컴포넌트
+ *  @author   백도형
+ *  @version  1.0, 작업 내용
+ *  @see      None
+ */
+
+/**
+ *  @memberOf     ValidationTest
+ *  @constant     {Object} initialValues
+ *  @description  초기 값 설명 객체(입력 필드의 이름 값과 일치)
+ */
 const initialValues = {
     email: "",
     password: "",
     password2: ""
-}
+};
 
+/**
+ *  @component    ValidationTest
+ *  @param        none
+ *  @description  Home 화면 컴포넌트
+ */
 const ValidationTest = () => {
-    //사용자가 입력 필드에 입력 한 데이터 보유
+    /**
+     *  @memberOf     ValidationTest
+     *  @var          {Object} formValues
+     *  @description  사용자가 입력 필드에 입력 한 데이터 보유
+     */
     const [formValues, setFormValues] = useState(initialValues);
 
-    //각 입력 필드에 대한 오류 보유
+    /**
+     *  @memberOf     ValidationTest
+     *  @var          {Object} formErrors
+     *  @description  각 입력 필드에 대한 오류 보유
+     */
     const [formErrors, setFormErrors] = useState({});
 
-    //양식이 제출 중인지 여부 추적적
+    /**
+     *  @memberOf     ValidationTest
+     *  @var          {boolean} isSubmitting
+     *  @description  양식이 제출 중인지 여부 추적적
+     */
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     //////////////////////////////////////////////////////////////////////////////////
@@ -33,11 +60,12 @@ const ValidationTest = () => {
         setIsSubmitting(true);
     };
 
-    //데이터 폼 유효성 검사 처리하는 함수
     /**
-     * @memberOf asd
-     * @param {number}
-     * @type {function(*): {}}
+     *  @memberOf     ValidationTest
+     *  @function     validate
+     *  @param        {Object} values - 값
+     *  @return       {Object} errors - validation 체크 된 값
+     *  @description  데이터 폼 유효성 검사 처리하는 함수
      */
     const validate = useCallback((values) => {
         let errors = {};

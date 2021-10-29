@@ -1,10 +1,22 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom';
-import Home from './Home';
-import About from './About';
-import ValidationTest from "./ValidationTest";
+import Home from '../sample/Home';
+import About from '../sample/About';
+import ValidationTest from "../sample/ValidationTest";
 
-const App = () => {
+/**
+ *  @summary  최상위 컴포넌트
+ *  @author   백도형
+ *  @version  1.0, 작업 내용
+ *  @see      None
+ */
+
+/**
+ *  @component    App
+ *  @param        none
+ *  @description  최상위 컴포넌트
+ */
+const Main = () => {
     return (
         <div>
             <ul>
@@ -26,4 +38,4 @@ const App = () => {
     );
 }
 
-export default App;
+export default Main;
