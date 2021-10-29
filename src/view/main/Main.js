@@ -19,7 +19,7 @@ import ValidationTest from "../sample/ValidationTest";
 const Main = () => {
     return (
         <div>
-            <ul>
+            <ul id="main">
                 <li>
                     <Link to="/">Home</Link>
                 </li>
@@ -27,7 +27,20 @@ const Main = () => {
                     <Link to="/about">About</Link>
                 </li>
                 <li>
-                    <Link to="/validation">Validation Test</Link>
+                    <Link to="/shop">Shop</Link>
+                    <ul className="drop">
+                        <div>
+                            <li>ring</li>
+                            <li>necklace</li>
+                            <li>bracelet</li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <Link to="/question">QnA</Link>
+                </li>
+                <li>
+                    <Link to="/contact">Contact</Link>
                 </li>
             </ul>
 
