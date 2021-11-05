@@ -1,0 +1,12 @@
+.ring-container {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 20px; //item 별 사이 간격
+
+    .grid-item {
+      background: #123456;
+    }
+  }
+}
