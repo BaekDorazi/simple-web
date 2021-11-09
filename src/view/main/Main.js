@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom';
+import Logo from '../../components/Logo';
 import Home from '../sample/Home';
 import About from '../sample/About';
 import ValidationTest from "../sample/ValidationTest";
@@ -15,9 +16,7 @@ import Bracelet from "./Bracelet";
 const Main = () => {
     return (
         <div>
-            <div>
-                <Link to="/"><img src={"logo192.png"}/></Link>
-            </div>
+            <Logo/>
             <ul id="main">
                 <li>
                     <Link to="/">Home</Link>
