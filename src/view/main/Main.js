@@ -1,12 +1,12 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom';
-import Logo from '../../components/Logo';
 import Home from '../sample/Home';
 import About from '../sample/About';
 import ValidationTest from "../sample/ValidationTest";
 import Ring from "../main/Ring";
 import Necklace from "./Necklace";
 import Bracelet from "./Bracelet";
+import Header from "../../components/Header/Header";
 
 /**
  *  @component    App
@@ -15,40 +15,18 @@ import Bracelet from "./Bracelet";
  */
 const Main = () => {
     return (
-        <div>
-            <Logo/>
-            <ul id="main">
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/about">About</Link>
-                </li>
-                <li>
-                    <Link to="/shop/ring">Shop</Link>
-                    <ul className="drop">
-                        <div>
-                            <li><Link to="/shop/ring">Ring</Link></li>
-                            <li><Link to="/shop/necklace">Necklace</Link></li>
-                            <li><Link to="/shop/bracelet">Bracelet</Link></li>
-                        </div>
-                    </ul>
-                </li>
-                <li>
-                    <Link to="/question">QnA</Link>
-                </li>
-                <li>
-                    <Link to="/contact">Contact</Link>
-                </li>
-            </ul>
+        <>
+            <div className="main-container">
+                <Header/>
 
-            <Route path="/" exact={true} component={Home}/>
-            <Route path="/about" component={About}/>
-            <Route path="/validation" component={ValidationTest}/>
-            <Route path="/shop/ring" component={Ring}/>
-            <Route path="/shop/necklace" component={Necklace}/>
-            <Route path="/shop/bracelet" component={Bracelet}/>
-        </div>
+                <Route path="/" exact={true} component={Home}/>
+                <Route path="/about" component={About}/>
+                <Route path="/validation" component={ValidationTest}/>
+                <Route path="/shop/ring" component={Ring}/>
+                <Route path="/shop/necklace" component={Necklace}/>
+                <Route path="/shop/bracelet" component={Bracelet}/>
+            </div>
+        </>
     );
 }
 
