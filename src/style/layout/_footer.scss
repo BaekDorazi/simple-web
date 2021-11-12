@@ -1,0 +1,13 @@
+.footer-container {
+  margin: 50px;
+  display: flex;
+  text-align: center;
+
+  .footer-left {
+    flex: 1;
+  }
+
+  .footer-right {
+    flex: 1;
+  }
+}

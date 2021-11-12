@@ -9,6 +9,7 @@ import Bracelet from "./Bracelet";
 import Header from "../../components/Header/Header";
 import SideNav from "../../components/SideNav";
 import MainContent from "./MainContent";
+import Footer from "../../components/Footer";
 
 /**
  *  @component    App
@@ -31,6 +32,7 @@ const Main = () => {
                 {/*<Route path="/shop/necklace" component={Necklace}/>*/}
                 {/*<Route path="/shop/bracelet" component={Bracelet}/>*/}
             </div>
+            <Footer />
         </>
     );
 }
