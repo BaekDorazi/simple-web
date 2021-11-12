@@ -8,6 +8,7 @@ import Necklace from "./Necklace";
 import Bracelet from "./Bracelet";
 import Header from "../../components/Header/Header";
 import SideNav from "../../components/SideNav";
+import MainContent from "./MainContent";
 
 /**
  *  @component    App
@@ -19,7 +20,7 @@ const Main = () => {
         <>
             <div className="main-container">
                 <div className="side-nav-container"><SideNav /></div>
-                <div className="content-container">content</div>
+                <div className="content-container"><MainContent /></div>
 
                 {/*<Header/>*/}
 
