@@ -1,2 +1,12 @@
 .main-container {
+  display: flex;
+  margin: 50px;
+
+  .side-nav-container {
+    flex: 2;
+  }
+
+  .content-container {
+    flex: 8;
+  }
 }

@@ -7,6 +7,7 @@ import Ring from "../main/Ring";
 import Necklace from "./Necklace";
 import Bracelet from "./Bracelet";
 import Header from "../../components/Header/Header";
+import SideNav from "../../components/SideNav";
 
 /**
  *  @component    App
@@ -17,14 +18,17 @@ const Main = () => {
     return (
         <>
             <div className="main-container">
-                <Header/>
+                <div className="side-nav-container"><SideNav /></div>
+                <div className="content-container">content</div>
 
-                <Route path="/" exact={true} component={Home}/>
-                <Route path="/about" component={About}/>
-                <Route path="/validation" component={ValidationTest}/>
-                <Route path="/shop/ring" component={Ring}/>
-                <Route path="/shop/necklace" component={Necklace}/>
-                <Route path="/shop/bracelet" component={Bracelet}/>
+                {/*<Header/>*/}
+
+                {/*<Route path="/" exact={true} component={Home}/>*/}
+                {/*<Route path="/about" component={About}/>*/}
+                {/*<Route path="/validation" component={ValidationTest}/>*/}
+                {/*<Route path="/shop/ring" component={Ring}/>*/}
+                {/*<Route path="/shop/necklace" component={Necklace}/>*/}
+                {/*<Route path="/shop/bracelet" component={Bracelet}/>*/}
             </div>
         </>
     );
