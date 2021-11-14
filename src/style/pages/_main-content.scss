@@ -1,9 +1,16 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
 .main-content-container {
+  .image-gallery-image {
+    height: 500px;
+  }
+
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 30px; //item 별 사이 간격
+    margin-top: 30px;
 
     .grid-item {
       border: 1px solid #000000;
