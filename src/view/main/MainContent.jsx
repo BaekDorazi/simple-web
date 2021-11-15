@@ -1,11 +1,11 @@
 import React, {useCallback} from 'react';
 import ImageGallery from 'react-image-gallery';
 
-import 'react-slideshow-image/dist/styles.css';
 import sample1 from "../../assets/sample1.jpg";
 import sample2 from "../../assets/sample2.jpg";
 import sample3 from "../../assets/sample3.jpg";
 import sample4 from "../../assets/sample4.jpg";
+import test from "../../assets/logo_sample.png";
 
 const MainContent = () => {
     const images = [
@@ -32,10 +32,14 @@ const MainContent = () => {
 
         const productList = sampleData.map((data, idx) => {
             return (
-                <div
-                    key={idx}
-                    className="grid-item">
-                    {data}
+                // <div
+                //     key={idx}
+                //     className="grid-item">
+                //     {data}
+                // </div>
+                <div className="screen1">
+                    <span></span><span></span><span></span><span></span>
+                    <img src={test}/>
                 </div>
             )
         });
@@ -56,6 +60,15 @@ const MainContent = () => {
                 slideDuration={1000}/>
 
             <div className="grid-container">
+                <div className="banner">
+                    <img src={test}/>
+                    <span className="text">첫번째 효과</span>
+                </div>
+
+                <div className="screen1">
+                    <span></span><span></span><span></span><span></span>
+                    <img src={test}/>
+                </div>
                 {getProductComp()}
             </div>
         </div>
