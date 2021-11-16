@@ -10,6 +10,7 @@ import Header from "../../components/Header/Header";
 import SideNav from "../../components/SideNav";
 import MainContent from "./MainContent";
 import Footer from "../../components/Footer";
+import Login from "./Login";
 
 /**
  *  @component    App
@@ -21,7 +22,10 @@ const Main = () => {
         <>
             <div className="main-container">
                 <div className="side-nav-container"><SideNav /></div>
-                <div className="content-container"><MainContent /></div>
+                <div className="content-container">
+                    <Route path="/" exact={true} component={MainContent}/>
+                    <Route path="/login" component={Login}/>
+                </div>
 
                 {/*<Header/>*/}
 

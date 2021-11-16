@@ -10,15 +10,15 @@ const SideNav = () => {
                 <div className="join">Join</div>
             </div>
 
-            <h1 className="logo">BAEK</h1>
+            <h1 className="logo">
+                <Link to="/">BAEK</Link>
+            </h1>
 
             <div className="menu-container">
                 <div>menu1</div>
                 <div>menu2</div>
                 <div>menu3</div>
             </div>
-
-            <Route path="/login" component={Login}/>
         </div>
     );
 }
