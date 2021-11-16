@@ -15,9 +15,24 @@ const SideNav = () => {
             </h1>
 
             <div className="menu-container">
-                <div>menu1</div>
-                <div>menu2</div>
-                <div>menu3</div>
+                <div className="accordion">
+                    <input type="radio" name="accordion" id="answer01"/>
+                    <label for="answer01">ABOUT</label>
+
+                    <input type="radio" name="accordion" id="answer02"/>
+                    <label htmlFor="answer02">SHOP</label>
+                    <div>
+                        <div>RING</div>
+                        <div>NECKLACE</div>
+                        <div>BRACELET</div>
+                    </div>
+
+                    <input type="radio" name="accordion" id="answer03"/>
+                    <label htmlFor="answer03">NOTICE</label>
+
+                    <input type="radio" name="accordion" id="answer04"/>
+                    <label htmlFor="answer04">Q&A</label>
+                </div>
             </div>
         </div>
     );
