@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "../../components/Button";
 
 /**
  *  @component    Necklace
@@ -9,6 +10,8 @@ const Necklace = () => {
     return (
         <div>
             목걸이 판매 화면
+
+            <Button>Button</Button>
         </div>
     );
 }
