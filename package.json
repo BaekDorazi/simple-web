@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "better-docs": "^2.3.2",
+    "classnames": "^2.3.1",
     "formik": "^2.2.9",
     "jodit-react": "^1.1.11",
     "jsdoc": "^3.6.7",

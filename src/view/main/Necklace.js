@@ -11,7 +11,7 @@ const Necklace = () => {
         <div>
             목걸이 판매 화면
 
-            <Button>Button</Button>
+            <Button size='small'>Button</Button>
         </div>
     );
 }
