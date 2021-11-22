@@ -9,9 +9,21 @@ import Button from "../../components/Button";
 const Necklace = () => {
     return (
         <div>
-            목걸이 판매 화면
-
-            <Button size='small'>Button</Button>
+            <div>
+                <Button size='small' color="blue">Button</Button>
+                <Button size='medium' color="blue">Button2</Button>
+                <Button size='large' color="blue">Button3</Button>
+            </div>
+            <div>
+                <Button size='small' color="green">Button</Button>
+                <Button size='medium' color="green">Button2</Button>
+                <Button size='large' color="green">Button3</Button>
+            </div>
+            <div>
+                <Button size='small' color="pink">Button</Button>
+                <Button size='medium' color="pink">Button2</Button>
+                <Button size='large' color="pink">Button3</Button>
+            </div>
         </div>
     );
 }

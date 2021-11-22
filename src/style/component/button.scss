@@ -1,4 +1,18 @@
-$blue: #228be6; // 주석 선언
+$blue: #228be6;
+$green: #00261A;
+$pink: #E22664;
+
+//반복 되는 코드 재사용
+@mixin button-color($color) {
+  background: $color;
+  &:hover {
+    background: lighten($color, 10%); // 색상 10% 밝게
+  }
+
+  &:active {
+    background: darken($color, 10%); // 색상 10% 어둡게
+  }
+}
 
 .Button {
   display: inline-flex;
@@ -32,12 +46,21 @@ $blue: #228be6; // 주석 선언
     padding-right: 1rem;
   }
 
-  background: $blue; // 주석 사용
-  &:hover {
-    background: lighten($blue, 10%); // 색상 10% 밝게
+  //색상 관리
+  &.blue {
+    @include button-color($blue);
   }
 
-  &:active {
-    background: darken($blue, 10%); // 색상 10% 어둡게
+  &.green {
+    @include button-color($green);
+  }
+
+  &.pink {
+    @include button-color($pink);
+  }
+
+  //& + & === .Button + .Button
+  & + & {
+    margin-left: 1rem;
   }
 }
