@@ -25,6 +25,10 @@ const Main = () => {
                 <div className="content-container">
                     <Route path="/" exact={true} component={MainContent}/>
                     <Route path="/login" component={Login}/>
+                    <Route path="/about" component={About}/>
+                    <Route path="/shop/ring" component={Ring}/>
+                    <Route path="/shop/necklace" component={Necklace}/>
+                    <Route path="/shop/bracelet" component={Bracelet}/>
                 </div>
 
                 {/*<Header/>*/}

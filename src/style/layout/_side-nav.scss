@@ -19,11 +19,11 @@
   }
 
   .menu-container {
-    [id*="answer"] {
+    [id*="menu"] {
       display: none;
     }
 
-    [id*="answer"] + label {
+    [id*="menu"] + label {
       display: block;
       padding: 5px;
       border-bottom: 0;
@@ -34,19 +34,19 @@
       font-size: 12px;
     }
 
-    [id*="answer"] + label + div {
+    [id*="menu"] + label + div {
       max-height: 0;
       transition: all .35s;
       overflow: hidden;
       font-size: 11px;
     }
 
-    [id*="answer"] + label + div div {
+    [id*="menu"] + label + div div {
       //display: inline-block;
       padding: 5px;
     }
 
-    [id*="answer"]:checked + label + div {
+    [id*="menu"]:checked + label + div {
       max-height: 300px;
     }
   }
