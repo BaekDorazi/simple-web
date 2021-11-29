@@ -19,8 +19,10 @@
   }
 
   .menu-container {
+
+    //id에 menu가 포함 된 것
     [id*="menu"] {
-      display: none;
+      //display: none;
     }
 
     [id*="menu"] + label {
@@ -32,22 +34,27 @@
       cursor: pointer;
       position: relative;
       font-size: 12px;
+      text-decoration: none; //하이퍼링크 밑줄 없애기
     }
 
+    //radio button이 체크 안됐을 때
     [id*="menu"] + label + div {
       max-height: 0;
       transition: all .35s;
       overflow: hidden;
       font-size: 11px;
+      color: #000000;
+      text-decoration: none; //하이퍼링크 밑줄 없애기
+    }
+
+    //radio button이 체크 됐을 때
+    [id*="menu"]:checked + label + div {
+      max-height: 300px;
     }
 
     [id*="menu"] + label + div div {
       //display: inline-block;
       padding: 5px;
-    }
-
-    [id*="menu"]:checked + label + div {
-      max-height: 300px;
     }
   }
 }

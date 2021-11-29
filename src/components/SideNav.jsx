@@ -1,6 +1,5 @@
-import React from "react";
+import React, {useCallback} from "react";
 import {Route, Link} from 'react-router-dom';
-import Login from "../view/main/Login";
 
 const SideNav = () => {
     return (
@@ -17,21 +16,36 @@ const SideNav = () => {
             <div className="menu-container">
                 <div className="accordion">
                     <input type="radio" name="accordion" id="menu01"/>
-                    <label for="menu01">ABOUT</label>
+                    <label htmlFor="menu01">
+                        <Link to="/about" for="menu01">ABOUT</Link>
+                    </label>
 
                     <input type="radio" name="accordion" id="menu02"/>
-                    <label htmlFor="menu02">SHOP</label>
+                    <label htmlFor="menu02">
+                        <Link to="/shop/ring" for="menu02">SHOP</Link>
+                    </label>
+                    {/*하단 메뉴*/}
                     <div>
-                        <div><Link to="/shop/ring">RING</Link></div>
-                        <div><Link to="/shop/necklace">NECKLACE</Link></div>
-                        <div><Link to="/shop/bracelet">BRACELET</Link></div>
+                        <div>
+                            <Link to="/shop/ring">RING</Link>
+                        </div>
+                        <div>
+                            <Link to="/shop/necklace">NECKLACE</Link>
+                        </div>
+                        <div>
+                            <Link to="/shop/bracelet">BRACELET</Link>
+                        </div>
                     </div>
 
                     <input type="radio" name="accordion" id="menu03"/>
-                    <label htmlFor="menu03">NOTICE</label>
+                    <label htmlFor="menu03">
+                        <Link to="/notice">NOTICE</Link>
+                    </label>
 
                     <input type="radio" name="accordion" id="menu04"/>
-                    <label htmlFor="menu04">Q&A</label>
+                    <label htmlFor="menu04">
+                        <Link to="/question">Q&A</Link>
+                    </label>
                 </div>
             </div>
         </div>
