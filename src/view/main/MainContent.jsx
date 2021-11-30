@@ -28,20 +28,18 @@ const MainContent = () => {
     ];
 
     const getProductComp = useCallback(() => {
-        const sampleData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        const sampleData = [1, 2, 3, 4, 5, 6];
 
         const productList = sampleData.map((data, idx) => {
             return (
-                // <div
-                //     key={idx}
-                //     className="grid-item">
-                //     {data}
-                // </div>
                 <div className="screen1">
                     <span></span><span></span><span></span><span></span>
+                    <span className="product-info">
+                        상품명
+                    </span>
                     <img src={test}/>
                 </div>
-            )
+            );
         });
 
         return productList;
@@ -57,18 +55,10 @@ const MainContent = () => {
                 showPlayButton={false}
                 showFullscreenButton={false}
                 showThumbnails={false}
-                slideDuration={1000}/>
+                slideDuration={1000}
+                autoPlay={true}/>
 
             <div className="grid-container">
-                <div className="banner">
-                    <img src={test}/>
-                    <span className="text">첫번째 효과</span>
-                </div>
-
-                <div className="screen1">
-                    <span></span><span></span><span></span><span></span>
-                    <img src={test}/>
-                </div>
                 {getProductComp()}
             </div>
         </div>
