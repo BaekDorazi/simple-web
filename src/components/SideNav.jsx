@@ -5,8 +5,8 @@ const SideNav = () => {
     return (
         <div className="side-nav-container">
             <div className="login-join-container">
-                <Link to="/login" className="login">Login</Link>
-                <div className="join">Join</div>
+                <Link to="/login" className="login">LOGIN</Link>
+                <Link to="/join" className="join">JOIN</Link>
             </div>
 
             <h1 className="logo">
@@ -17,12 +17,12 @@ const SideNav = () => {
                 <div className="accordion">
                     <input type="radio" name="accordion" id="menu01"/>
                     <label htmlFor="menu01">
-                        <Link to="/about" for="menu01">ABOUT</Link>
+                        <Link to="/about" htmlFor="menu01">ABOUT</Link>
                     </label>
 
                     <input type="radio" name="accordion" id="menu02"/>
                     <label htmlFor="menu02">
-                        <Link to="/shop/ring" for="menu02">SHOP</Link>
+                        <Link to="/shop/ring" htmlFor="menu02">SHOP</Link>
                     </label>
                     {/*하단 메뉴*/}
                     <div>

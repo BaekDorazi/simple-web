@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .main-container {
   display: flex;
   margin: 50px;
+  font-family: 'Montserrat', sans-serif;
+
+  //드래그 방지
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   .side-nav-container {
-    flex: 2;
+    flex: 2.5;
   }
 
   .content-container {
-    flex: 8;
+    flex: 7.5;
   }
 }
