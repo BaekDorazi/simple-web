@@ -32,11 +32,8 @@ const MainContent = () => {
 
         const productList = sampleData.map((data, idx) => {
             return (
-                <div className="screen1">
+                <div className="product-item">
                     <span></span><span></span><span></span><span></span>
-                    <span className="product-info">
-                        상품명
-                    </span>
                     <img src={test}/>
                 </div>
             );
